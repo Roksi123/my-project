@@ -93,3 +93,10 @@ ul {
   line-height: 1.5;
   border-radius: 0.25rem;
 }
+.active {
+  color: black;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
