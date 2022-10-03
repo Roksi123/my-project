@@ -23,6 +23,35 @@ let newData = document.querySelector(`#currentData`);
 let currentTime = new Date();
 newData.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thur", "Friday", "Saturday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+     <div class="forecast-date">${day}</div>
+    <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  id="icon"
+                  width="50"
+                />
+                <div class="low">
+                  10°;
+                  <div class="label">Low</div>
+                </div>
+                <div class="high">
+                  21°;
+                  <div class="label">High</div>
+                </div>
+              </div> `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#placeSearch").value;
@@ -99,4 +128,5 @@ farenheitlink.addEventListener("click", displayFarenheitTemp);
 let celsiuslink = document.querySelector("#celsius-link");
 
 celsiuslink.addEventListener("click", displayCelsiusTemp);
+displayForecast();
 searchCity("Lviv");
