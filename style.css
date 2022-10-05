@@ -130,3 +130,7 @@ li:first-letter {
 .active:hover {
   text-decoration: none;
 }
+.link {
+  margin-top: 25px;
+  padding: 20px;
+}
