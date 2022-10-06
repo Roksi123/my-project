@@ -122,31 +122,8 @@ function showPosition(position) {
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-function displayFarenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiuslink.classList.remove("active");
-  farenheitlink.classList.add("active");
-  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
 
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  celsiuslink.classList.add("active");
-  farenheitlink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-let celsiusTemperature = null;
 let button = document.querySelector("#current-location-button");
 button.addEventListener("click", getCurrentPosition);
-
-let farenheitlink = document.querySelector("#fahrenheit-link");
-
-farenheitlink.addEventListener("click", displayFarenheitTemp);
-let celsiuslink = document.querySelector("#celsius-link");
-
-celsiuslink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Lviv");
