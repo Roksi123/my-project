@@ -73,9 +73,8 @@ function getForecast(coordinates) {
 
 function search(event) {
   event.preventDefault();
-  let city = document.querySelector("#placeSearch").value;
-  searchCity(city);
-  searchCity("Lviv");
+  let city = document.querySelector("#placeSearch");
+  searchCity(city.value);
 }
 
 let form = document.querySelector(`#dataType`);
