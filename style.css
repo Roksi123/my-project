@@ -2,9 +2,8 @@ body {
   margin: 16px;
   font-size: 100%;
   font-family: arial, sans-serif;
-  background: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
+  background-image: url("img/blue-sky-.jpg");
 }
 
 h1 {
@@ -70,6 +69,11 @@ li:first-letter {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+  background: linear-gradient(
+    178deg,
+    rgb(156, 177, 248) 7.5%,
+    rgb(153, 247, 243) 93.1%
+  );
 }
 .current-text:first-letter {
   text-transform: capitalize;
